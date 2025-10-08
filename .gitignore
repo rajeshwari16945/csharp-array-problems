@@ -1,0 +1,24 @@
+# Ignore build output
+bin/
+obj/
+
+# Visual Studio cache
+.vs/
+
+# User-specific files
+*.user
+*.suo
+
+# Logs and temporary
+*.log
+*.tmp
+
+# Compiled binaries
+*.dll
+*.exe
+*.pdb
+
+# NuGet
+packages/
+*.nupkg
+*.snupkg
