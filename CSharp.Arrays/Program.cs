@@ -1,2 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using CSharp.Arrays;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        SumOfNNumbers processor = new SumOfNNumbers();
+        processor.Run();
+    }
+}
