@@ -5,12 +5,15 @@ class Program
     static void Main(string[] args)
     {
 
-        ReverseOfArray.GetReverse();
+       /* ReverseOfArray.GetReverse();*/
 
         /*SumOfNNumbers processor = new SumOfNNumbers();
         processor.Run();*/
 
         /*NoOfRepetitiveNumbersInArray obj = new NoOfRepetitiveNumbersInArray();
         obj.GetNoOfEachELements();*/
+
+        JumpGameWithArray jumpGame = new JumpGameWithArray();
+        jumpGame.CanJump();
     }
 }
