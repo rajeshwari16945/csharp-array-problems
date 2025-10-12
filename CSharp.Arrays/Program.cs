@@ -13,7 +13,10 @@ class Program
         /*NoOfRepetitiveNumbersInArray obj = new NoOfRepetitiveNumbersInArray();
         obj.GetNoOfEachELements();*/
 
-        JumpGameWithArray jumpGame = new JumpGameWithArray();
-        jumpGame.CanJump();
+       /* JumpGameWithArray jumpGame = new JumpGameWithArray();
+        jumpGame.CanJump();*/
+
+        ProductOfArrayExceptSelf productOfArrayExceptSelf = new ProductOfArrayExceptSelf();
+        productOfArrayExceptSelf.getTheProductOfArrayExceptSelf();
     }
 }
