@@ -19,7 +19,10 @@ class Program
         /*ProductOfArrayExceptSelf productOfArrayExceptSelf = new ProductOfArrayExceptSelf();
         productOfArrayExceptSelf.getTheProductOfArrayExceptSelf();*/
 
-        LongestSubArray longestSubArray = new LongestSubArray();
-        longestSubArray.getLongestSubArray();
+        /*LongestSubArray longestSubArray = new LongestSubArray();
+        longestSubArray.getLongestSubArray();*/
+
+        DynamicArray dynamicArray= new DynamicArray();  
+        dynamicArray.ResizeArrayDynamically();
     }
 }
