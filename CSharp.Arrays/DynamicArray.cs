@@ -15,66 +15,127 @@ namespace CSharp.Arrays
 
         public void ResizeArrayDynamically()
         {
-            Console.WriteLine("Enter the any: 1. Insert 2. Print 3. Exit");
+            Console.WriteLine("Enter the any: 1. Insert At Last 2. Print 3. Insert At First 4. Exit");
             int choice = Convert.ToInt32(Console.ReadLine());
             if (choice == 1)
             {
-                Console.WriteLine("Enter the element into the array: ");
-                InsertElement();
+                Console.WriteLine("Enter the element in the last of the array: ");
+                InsertElementAtLast();
             }
             else if (choice == 2)
             {
                 Console.WriteLine("The elements in the array are: ");
                 PrintArray();
             }
-            else if (choice == 3)
+            else if(choice == 3)
+            {
+                Console.WriteLine("Enter the element in the first of the array: ");
+                InsertElementAtFirst();
+            }
+            else if (choice == 4)
             {
                 Console.WriteLine("Exit from the program");
             }
         }
 
-        public void InsertElement()
+        public void InsertElementAtFirst()
         {
             if (firstArray != null && count < firstArray.Length)
-                ReadAndInsertElement("first");
+                ReadAndInsertElementInFirst("first");
             else if (secondArray != null && count < secondArray.Length)
-                ReadAndInsertElement("second");
+                ReadAndInsertElementInFirst("second");
             else if (firstArray != null && count == firstArray.Length)
             {
-                secondArray = CreateArray(firstArray, secondArray);
+                secondArray = CreateArrayForFirst(firstArray, secondArray, Convert.ToInt32(Console.ReadLine()));
                 firstArray = null;
-                ReadAndInsertElement("second");
             }
             else if (secondArray != null && count == secondArray.Length)
             {
-                firstArray = CreateArray(secondArray, firstArray);
+                firstArray = CreateArrayForFirst(secondArray, firstArray, Convert.ToInt32(Console.ReadLine()));
                 secondArray = null;
-                ReadAndInsertElement("first");
+            }
+            ResizeArrayDynamically();
+        }
+
+        public void InsertElementAtLast()
+        {
+            if (firstArray != null && count < firstArray.Length)
+                ReadAndInsertElementInLast("first");
+            else if (secondArray != null && count < secondArray.Length)
+                ReadAndInsertElementInLast("second");
+            else if (firstArray != null && count == firstArray.Length)
+            {
+                secondArray = CreateArrayForLast(firstArray, secondArray);
+                firstArray = null;
+                ReadAndInsertElementInLast("second");
+            }
+            else if (secondArray != null && count == secondArray.Length)
+            {
+                firstArray = CreateArrayForLast(secondArray, firstArray);
+                secondArray = null;
+                ReadAndInsertElementInLast("first");
 
             }
             ResizeArrayDynamically();
         }
 
-        public void ReadAndInsertElement(string whichArray)
+        public void ReadAndInsertElementInFirst(string whichArray)
         {
             if(whichArray == "first")
             {
-                firstArray[count] = Convert.ToInt32(Console.ReadLine());
+                int value = Convert.ToInt32(Console.ReadLine());
+                firstArray = moveElementsOnePositionToRight(firstArray, value);
             }
             else if(whichArray == "second")
+            {
+                int value=  Convert.ToInt32(Console.ReadLine());
+                secondArray = moveElementsOnePositionToRight(secondArray, value);
+            }
+            count++;
+        }
+
+        public void ReadAndInsertElementInLast(string whichArray)
+        {
+            if (whichArray == "first")
+            {
+                firstArray[count] = Convert.ToInt32(Console.ReadLine());
+            }
+            else if (whichArray == "second")
             {
                 secondArray[count] = Convert.ToInt32(Console.ReadLine());
             }
             count++;
         }
 
-        public int[] CreateArray(int[] orginalArray, int[] newArray)
+        public int[] moveElementsOnePositionToRight(int[] array, int value)
+        {
+            for (int i = array.Length - 1; i > 0; i--)
+            {
+                array[i] = array[i - 1];
+            }
+            array[0] = value;
+            return array;
+        }
+
+        public int[] CreateArrayForLast(int[] orginalArray, int[] newArray)
         {
             newArray = new int[orginalArray.Length + 2];
             for (int i = 0; i < orginalArray.Length; i++)
             {
                 newArray[i] = orginalArray[i];
             }
+            return newArray;
+        }
+
+        public int[] CreateArrayForFirst(int[] orginalArray, int[] newArray, int val)
+        {
+            newArray = new int[orginalArray.Length + 2];
+            newArray[0] = val;
+            for (int i = 0; i < orginalArray.Length; i++)
+            {
+                newArray[i+1] = orginalArray[i];
+            }
+            count++;
             return newArray;
         }
 
