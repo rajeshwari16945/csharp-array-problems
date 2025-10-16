@@ -15,7 +15,8 @@ namespace CSharp.Arrays
 
         public void ResizeArrayDynamically()
         {
-            Console.WriteLine("Enter the any: 1. Insert At Last 2. Print 3. Insert At First 4. Exit");
+            Console.WriteLine("Enter the any: 1. Insert At Last " +
+                "2. Print 3. Insert At First 4. Insert At Any Position 5. Exit");
             int choice = Convert.ToInt32(Console.ReadLine());
             if (choice == 1)
             {
@@ -32,7 +33,15 @@ namespace CSharp.Arrays
                 Console.WriteLine("Enter the element in the first of the array: ");
                 InsertElementAtFirst();
             }
-            else if (choice == 4)
+            else if(choice == 4)
+            {
+                Console.WriteLine("Enter the position from: 0 to "  + (count+1) );
+                int position = Convert.ToInt32(Console.ReadLine())-1;
+                Console.WriteLine("Enter the element in the position of the array: ");
+                InsertElementAtPosition(position);
+
+            }
+            else if (choice == 5)
             {
                 Console.WriteLine("Exit from the program");
             }
@@ -52,6 +61,25 @@ namespace CSharp.Arrays
             else if (secondArray != null && count == secondArray.Length)
             {
                 firstArray = CreateArrayForFirst(secondArray, firstArray, Convert.ToInt32(Console.ReadLine()));
+                secondArray = null;
+            }
+            ResizeArrayDynamically();
+        }
+
+        public void InsertElementAtPosition(int pos)
+        {
+            if (firstArray != null && count < firstArray.Length)
+                ReadAndInsertElementInAnyPosition("first", pos);
+            else if (secondArray != null && count < secondArray.Length)
+                ReadAndInsertElementInAnyPosition("second", pos);
+            else if (firstArray != null && count == firstArray.Length)
+            {
+                secondArray = CreateArrayForAnyPosition(firstArray, secondArray, Convert.ToInt32(Console.ReadLine()), pos);
+                firstArray = null;
+            }
+            else if (secondArray != null && count == secondArray.Length)
+            {
+                firstArray = CreateArrayForAnyPosition(secondArray, firstArray, Convert.ToInt32(Console.ReadLine()), pos);
                 secondArray = null;
             }
             ResizeArrayDynamically();
@@ -84,12 +112,12 @@ namespace CSharp.Arrays
             if(whichArray == "first")
             {
                 int value = Convert.ToInt32(Console.ReadLine());
-                firstArray = moveElementsOnePositionToRight(firstArray, value);
+                firstArray = moveElementsOnePositionToRight(firstArray, value, 0);
             }
             else if(whichArray == "second")
             {
                 int value=  Convert.ToInt32(Console.ReadLine());
-                secondArray = moveElementsOnePositionToRight(secondArray, value);
+                secondArray = moveElementsOnePositionToRight(secondArray, value, 0);
             }
             count++;
         }
@@ -107,13 +135,28 @@ namespace CSharp.Arrays
             count++;
         }
 
-        public int[] moveElementsOnePositionToRight(int[] array, int value)
+        public void ReadAndInsertElementInAnyPosition(string whichArray, int position)
         {
-            for (int i = array.Length - 1; i > 0; i--)
+            if (whichArray == "first")
+            {
+                int value = Convert.ToInt32(Console.ReadLine());
+                firstArray = moveElementsOnePositionToRight(firstArray, value, position);
+            }
+            else if (whichArray == "second")
+            {
+                int value = Convert.ToInt32(Console.ReadLine());
+                secondArray = moveElementsOnePositionToRight(secondArray, value, position);
+            }
+            count++;
+        }
+
+        public int[] moveElementsOnePositionToRight(int[] array, int value, int pos)
+        {
+            for (int i = array.Length - 1; i > 0+pos; i--)
             {
                 array[i] = array[i - 1];
             }
-            array[0] = value;
+            array[pos] = value;
             return array;
         }
 
@@ -134,6 +177,22 @@ namespace CSharp.Arrays
             for (int i = 0; i < orginalArray.Length; i++)
             {
                 newArray[i+1] = orginalArray[i];
+            }
+            count++;
+            return newArray;
+        }
+
+        public int[] CreateArrayForAnyPosition(int[] orginalArray, int[] newArray, int val, int pos)
+        {
+            newArray = new int[orginalArray.Length + 2];
+            for (int i = 0; i < orginalArray.Length; i++)
+            {
+                if(i < pos)
+                    newArray[i] = orginalArray[i];
+                else if(i == pos)
+                    newArray[i] = val;
+                else
+                    newArray[i+1] = orginalArray[i];
             }
             count++;
             return newArray;
