@@ -5,7 +5,7 @@ class Program
     static void Main(string[] args)
     {
 
-       /* ReverseOfArray.GetReverse();*/
+        /* ReverseOfArray.GetReverse();*/
 
         /*SumOfNNumbers processor = new SumOfNNumbers();
         processor.Run();*/
@@ -13,8 +13,8 @@ class Program
         /*NoOfRepetitiveNumbersInArray obj = new NoOfRepetitiveNumbersInArray();
         obj.GetNoOfEachELements();*/
 
-       /* JumpGameWithArray jumpGame = new JumpGameWithArray();
-        jumpGame.CanJump();*/
+        /* JumpGameWithArray jumpGame = new JumpGameWithArray();
+         jumpGame.CanJump();*/
 
         /*ProductOfArrayExceptSelf productOfArrayExceptSelf = new ProductOfArrayExceptSelf();
         productOfArrayExceptSelf.getTheProductOfArrayExceptSelf();*/
@@ -22,7 +22,14 @@ class Program
         /*LongestSubArray longestSubArray = new LongestSubArray();
         longestSubArray.getLongestSubArray();*/
 
-        DynamicArray dynamicArray= new DynamicArray();  
-        dynamicArray.ResizeArrayDynamically();
+        /*DynamicArray dynamicArray= new DynamicArray();  
+        dynamicArray.ResizeArrayDynamically();*/
+
+        var nums = new List<int> { 1, 2, 3 };
+        var result = SubsetGenerator.GenerateSubsets(nums);
+        foreach (var subset in result)
+        {
+            Console.WriteLine("[" + string.Join(", ", subset) + "]");
+        }
     }
 }
