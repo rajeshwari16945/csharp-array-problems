@@ -22,14 +22,14 @@ class Program
         /*LongestSubArray longestSubArray = new LongestSubArray();
         longestSubArray.getLongestSubArray();*/
 
-        /*DynamicArray dynamicArray= new DynamicArray();  
-        dynamicArray.ResizeArrayDynamically();*/
+        DynamicArray dynamicArray = new DynamicArray();
+        dynamicArray.Menu();
 
-        var nums = new List<int> { 1, 2, 3 };
-        var result = SubsetGenerator.GenerateSubsets(nums);
-        foreach (var subset in result)
-        {
-            Console.WriteLine("[" + string.Join(", ", subset) + "]");
-        }
+        //var nums = new List<int> { 1, 2, 3 };
+        //var result = SubsetGenerator.GenerateSubsets(nums);
+        //foreach (var subset in result)
+        //{
+        //    Console.WriteLine("[" + string.Join(", ", subset) + "]");
+        //}
     }
 }
