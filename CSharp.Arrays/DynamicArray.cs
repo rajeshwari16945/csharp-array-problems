@@ -15,7 +15,7 @@ namespace CSharp.Arrays
         public void Menu()
         {
             Console.WriteLine("Enter the any: 1. Insert At Last " +
-                "2. Insert At First 3. Insert At Any Position 4. Print 5. Exit");
+                "2. Insert At First 3. Insert At Any Position 4. Print 5. Delete At End 6. Exit");
             int choice = Convert.ToInt32(Console.ReadLine());
             switch (choice)
             {
@@ -27,7 +27,9 @@ namespace CSharp.Arrays
                     break;
                 case 4: PrintArray();
                         break;
-                case 5: Console.WriteLine("Exit from the program");
+                case 5: DeleteFromEnd(); 
+                        break;
+                case 6: Console.WriteLine("Exit from the program");
                         return;
                 default: Console.WriteLine("Invalid choice. Try again.");
                         break;
@@ -111,5 +113,17 @@ namespace CSharp.Arrays
         {
             return currentArray ?? backupArray;
         }
+
+        public void DeleteFromEnd()
+        {
+            if (count != 0)
+            {
+                int[] array = GetActiveArray();
+                array[count - 1] = 0; 
+                count--;
+            }
+            Menu();
+        }
+
     }
 }
