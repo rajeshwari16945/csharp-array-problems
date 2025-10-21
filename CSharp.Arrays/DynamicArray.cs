@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,7 +16,7 @@ namespace CSharp.Arrays
         public void Menu()
         {
             Console.WriteLine("Enter the any: 1. Insert At Last " +
-                "2. Insert At First 3. Insert At Any Position 4. Print 5. Delete At End 6. Exit");
+                "2. Insert At First 3. Insert At Any Position 4. Print 5. Delete At End 6. Delete if Element Exist 7. Exit");
             int choice = Convert.ToInt32(Console.ReadLine());
             switch (choice)
             {
@@ -29,7 +30,9 @@ namespace CSharp.Arrays
                         break;
                 case 5: DeleteFromEnd(); 
                         break;
-                case 6: Console.WriteLine("Exit from the program");
+                case 6: DeleteIfElementExists();
+                        break;
+                case 7: Console.WriteLine("Exit from the program");
                         return;
                 default: Console.WriteLine("Invalid choice. Try again.");
                         break;
@@ -40,7 +43,7 @@ namespace CSharp.Arrays
         {
             Console.WriteLine("Enter value to insert at position " + (0 + 1) + ": ");
             int value = Convert.ToInt32(Console.ReadLine());
-            checkCapacityAndResize();
+            checkCapacityAndIncreaseSize();
             shiftRightAndInsert(value, 0);
             count++;
             Menu();
@@ -52,7 +55,7 @@ namespace CSharp.Arrays
             int pos = Convert.ToInt32(Console.ReadLine()) - 1;
             Console.WriteLine("Enter value to insert at position " + (pos+1) + ": ");
             int value = Convert.ToInt32(Console.ReadLine());
-            checkCapacityAndResize();
+            checkCapacityAndIncreaseSize();
             shiftRightAndInsert(value, pos);
             count++;
             Menu();
@@ -62,7 +65,7 @@ namespace CSharp.Arrays
         {
             Console.WriteLine("Enter value to insert at end: ");
             int value = Convert.ToInt32(Console.ReadLine());
-            checkCapacityAndResize();
+            checkCapacityAndIncreaseSize();
             GetActiveArray()[count] = value;
             count++;
             Menu();
@@ -79,12 +82,35 @@ namespace CSharp.Arrays
             return array;
         }
 
-        private void checkCapacityAndResize()
+        private void checkCapacityAndIncreaseSize()
         {
             int[] array = GetActiveArray();
             if (count < array.Length) return;
 
             int[] newArray = new int[array.Length + 2];
+            for (int i = 0; i < count; i++)
+            {
+                newArray[i] = array[i];
+            }
+
+            if (currentArray != null)
+            {
+                backupArray = newArray;
+                currentArray = null;
+            }
+            else
+            {
+                currentArray = newArray;
+                backupArray = null;
+            }
+        }
+
+        private void checkCapacityAndDecreaseSize()
+        {
+            int[] array = GetActiveArray();
+            if (count == array.Length) return;
+
+            int[] newArray = new int[count];
             for (int i = 0; i < count; i++)
             {
                 newArray[i] = array[i];
@@ -125,5 +151,36 @@ namespace CSharp.Arrays
             Menu();
         }
 
+        public void DeleteIfElementExists()
+        {
+            Console.WriteLine("Enter value to delete: ");
+            int value = Convert.ToInt32(Console.ReadLine());
+            if(shiftLeftAndDelete(value))
+            {
+                checkCapacityAndDecreaseSize();
+            }
+            Menu();
+        }
+
+        public Boolean shiftLeftAndDelete(int value)
+        {
+            int[] array = GetActiveArray();
+            int index = Array.IndexOf(array, value);
+            if (index != -1)
+            {
+                for (int i = index; i < count - 1; i++)
+                {
+                    array[i] = array[i + 1];
+                }
+                array[count - 1] = 0;
+                count--;
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("The number doesnt exist.");
+            }
+            return false;
+        }
     }
 }
