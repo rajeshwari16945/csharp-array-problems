@@ -16,7 +16,7 @@ namespace CSharp.Arrays
         public void Menu()
         {
             Console.WriteLine("Enter the any: 1. Insert At Last " +
-                "2. Insert At First 3. Insert At Any Position 4. Print 5. Delete At End 6. Delete if Element Exist 7. Exit");
+                "2. Insert At First 3. Insert At Any Position 4. Insert At Mid point 5. Print 6. Delete At End 7. Delete if Element Exist 8. Exit");
             int choice = Convert.ToInt32(Console.ReadLine());
             switch (choice)
             {
@@ -25,14 +25,16 @@ namespace CSharp.Arrays
                 case 2: InsertElementAtFirst();
                         break;
                 case 3: InsertElementAtPosition();
-                    break;
-                case 4: PrintArray();
                         break;
-                case 5: DeleteFromEnd(); 
+                case 4:InsertElementAtMidpoint();
                         break;
-                case 6: DeleteIfElementExists();
+                case 5: PrintArray();
                         break;
-                case 7: Console.WriteLine("Exit from the program");
+                case 6: DeleteFromEnd(); 
+                        break;
+                case 7: DeleteIfElementExists();
+                        break;
+                case 8: Console.WriteLine("Exit from the program");
                         return;
                 default: Console.WriteLine("Invalid choice. Try again.");
                         break;
@@ -182,5 +184,19 @@ namespace CSharp.Arrays
             }
             return false;
         }
+
+        public void InsertElementAtMidpoint()
+        {
+            int[] array = GetActiveArray();
+            int midpoint = count / 2;
+            Console.WriteLine($"Enter element to insert at midpoint position {midpoint + 1}: ");
+            int value = Convert.ToInt32(Console.ReadLine());
+            checkCapacityAndIncreaseSize();
+            shiftRightAndInsert(value, midpoint);
+            count++;
+
+            Menu();
+        }
+
     }
 }
