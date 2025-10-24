@@ -36,10 +36,10 @@ class Program
         sol.GetPermuteUnique(new int[] { 1, 1, 2 });*/
 
         StackImplementationWithArray stack = new StackImplementationWithArray();
-        stack.Push(10);
-        stack.Push(20);
-        stack.Push(30);
-        stack.Push(40);
+        stack.Push(1.1f);
+        stack.Push("Apple");
+        stack.Push(5);
+        stack.Push(4.23f);
         stack.Peek();
         stack.Pop();
         stack.Peek();
