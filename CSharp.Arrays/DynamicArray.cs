@@ -16,28 +16,21 @@ namespace CSharp.Arrays
         public void Menu()
         {
             Console.WriteLine("Enter the any: 1. Insert At Last " +
-                "2. Insert At First 3. Insert At Any Position 4. Insert At Mid point 5. Print 6. Delete At End 7. Delete if Element Exist 8. Exit");
+                "2. Insert At First 3. Insert At Any Position 4. Insert At Mid point 5. Print 6. Delete At End " +
+                "7. Delete if Element Exist 8. Delete from start 9. Exit");
             int choice = Convert.ToInt32(Console.ReadLine());
             switch (choice)
             {
-                case 1: InsertElementAtLast();
-                        break;
-                case 2: InsertElementAtFirst();
-                        break;
-                case 3: InsertElementAtPosition();
-                        break;
-                case 4:InsertElementAtMidpoint();
-                        break;
-                case 5: PrintArray();
-                        break;
-                case 6: DeleteFromEnd(); 
-                        break;
-                case 7: DeleteIfElementExists();
-                        break;
-                case 8: Console.WriteLine("Exit from the program");
-                        return;
-                default: Console.WriteLine("Invalid choice. Try again.");
-                        break;
+                case 1: InsertElementAtLast(); break;
+                case 2: InsertElementAtFirst(); break;
+                case 3: InsertElementAtPosition(); break;
+                case 4: InsertElementAtMidpoint(); break;
+                case 5: PrintArray(); break;
+                case 6: DeleteFromEnd(); break;
+                case 7: DeleteIfElementExists(); break;
+                case 8: DeleteFromStart(); break; 
+                case 9: Console.WriteLine("Exit from the program"); return;
+                default: Console.WriteLine("Invalid choice. Try again."); break;
             }
         }
 
@@ -157,17 +150,18 @@ namespace CSharp.Arrays
         {
             Console.WriteLine("Enter value to delete: ");
             int value = Convert.ToInt32(Console.ReadLine());
-            if(shiftLeftAndDelete(value))
+            int[] array = GetActiveArray();
+            int index = Array.IndexOf(array, value);
+            if (shiftLeftAndDelete(value))
             {
                 checkCapacityAndDecreaseSize();
             }
             Menu();
         }
 
-        public Boolean shiftLeftAndDelete(int value)
+        public Boolean shiftLeftAndDelete(int index)
         {
             int[] array = GetActiveArray();
-            int index = Array.IndexOf(array, value);
             if (index != -1)
             {
                 for (int i = index; i < count - 1; i++)
@@ -194,6 +188,22 @@ namespace CSharp.Arrays
             checkCapacityAndIncreaseSize();
             shiftRightAndInsert(value, midpoint);
             count++;
+
+            Menu();
+        }
+
+        public void DeleteFromStart()
+        {
+            if (count == 0)
+            {
+                Console.WriteLine("Array is empty. Nothing to delete.");
+                Menu();
+                return;
+            }
+
+            int[] array = GetActiveArray();
+            shiftLeftAndDelete(0);
+            checkCapacityAndDecreaseSize();
 
             Menu();
         }
