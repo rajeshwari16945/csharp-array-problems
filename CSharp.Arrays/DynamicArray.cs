@@ -17,7 +17,8 @@ namespace CSharp.Arrays
         {
             Console.WriteLine("Enter the any: 1. Insert At Last " +
                 "2. Insert At First 3. Insert At Any Position 4. Insert At Mid point 5. Print 6. Delete At End " +
-                "7. Delete if Element Exist 8. Delete from start 9. Delete from Any Position 10. Exit");
+                "7. Delete if Element Exist 8. Delete from start 9. Delete from Any Position 10. Search for a element " +
+                "11. Clear the Array 12. Exit");
             int choice = Convert.ToInt32(Console.ReadLine());
             switch (choice)
             {
@@ -30,7 +31,9 @@ namespace CSharp.Arrays
                 case 7: DeleteIfElementExists(); break;
                 case 8: DeleteFromStart(); break;
                 case 9: DeleteAtPosition(); break;
-                case 10: Console.WriteLine("Exit from the program"); return;
+                case 10: SearchForElement(); break;
+                case 11: ClearArray(); break;
+                case 12: Console.WriteLine("Exit from the program"); return;
                 default: Console.WriteLine("Invalid choice. Try again."); break;
             }
         }
@@ -223,6 +226,40 @@ namespace CSharp.Arrays
 
             shiftLeftAndDelete(pos);
             checkCapacityAndDecreaseSize();
+            Menu();
+        }
+
+        public void SearchForElement()
+        {
+            Console.WriteLine("Enter value to search: ");
+            int value = Convert.ToInt32(Console.ReadLine());
+            int index = IndexOf(value);
+            if (index != -1)
+            {
+                Console.WriteLine("Element found at index: " + index);
+            }
+            else
+            {
+                Console.WriteLine("Element not found in the array.");
+            }
+            Menu();
+        }
+
+        public int IndexOf(int value)
+        {
+            int[] array = GetActiveArray();
+            for (int i = 0; i < count; i++)
+                if (array[i] == value)
+                    return i;
+            return -1;
+        }
+
+        public void ClearArray()
+        {
+            int[] array = GetActiveArray();
+            for (int i = 0; i < count; i++)
+                array[i] = 0;
+            count = 0;
             Menu();
         }
     }
