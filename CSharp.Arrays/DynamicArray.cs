@@ -17,7 +17,7 @@ namespace CSharp.Arrays
         {
             Console.WriteLine("Enter the any: 1. Insert At Last " +
                 "2. Insert At First 3. Insert At Any Position 4. Insert At Mid point 5. Print 6. Delete At End " +
-                "7. Delete if Element Exist 8. Delete from start 9. Exit");
+                "7. Delete if Element Exist 8. Delete from start 9. Delete from Any Position 10. Exit");
             int choice = Convert.ToInt32(Console.ReadLine());
             switch (choice)
             {
@@ -28,8 +28,9 @@ namespace CSharp.Arrays
                 case 5: PrintArray(); break;
                 case 6: DeleteFromEnd(); break;
                 case 7: DeleteIfElementExists(); break;
-                case 8: DeleteFromStart(); break; 
-                case 9: Console.WriteLine("Exit from the program"); return;
+                case 8: DeleteFromStart(); break;
+                case 9: DeleteAtPosition(); break;
+                case 10: Console.WriteLine("Exit from the program"); return;
                 default: Console.WriteLine("Invalid choice. Try again."); break;
             }
         }
@@ -152,7 +153,7 @@ namespace CSharp.Arrays
             int value = Convert.ToInt32(Console.ReadLine());
             int[] array = GetActiveArray();
             int index = Array.IndexOf(array, value);
-            if (shiftLeftAndDelete(value))
+            if (shiftLeftAndDelete(index))
             {
                 checkCapacityAndDecreaseSize();
             }
@@ -208,5 +209,21 @@ namespace CSharp.Arrays
             Menu();
         }
 
+        public void DeleteAtPosition()
+        {
+            if (count == 0)
+            {
+                Console.WriteLine("Array is empty. Nothing to delete.");
+                Menu();
+                return;
+            }
+
+            Console.WriteLine($"Enter the position to delete (1 to {count}): ");
+            int pos = Convert.ToInt32(Console.ReadLine()) - 1;
+
+            shiftLeftAndDelete(pos);
+            checkCapacityAndDecreaseSize();
+            Menu();
+        }
     }
 }
