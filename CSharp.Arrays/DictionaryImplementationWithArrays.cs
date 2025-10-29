@@ -21,17 +21,25 @@ namespace CSharp.Arrays
 
         public void menu()
         {
-            Console.WriteLine("Enter any: 1. Add Key-Value Pair 2. Exit");
+            Console.WriteLine("Enter any: 1. Add Key-Value Pair 2. Delete Key 3. Exit");
             int choice = Convert.ToInt32(Console.ReadLine());
             switch (choice)
             {
-                case 1: Add(); 
-                        menu(); 
-                        break;
-                case 2: Console.WriteLine("Exit from the program"); return;
-                default: Console.WriteLine("Invalid choice. Try again."); 
-                        menu(); 
-                        break;
+                case 1:
+                    Add();
+                    menu();
+                    break;
+                case 2:
+                    Delete();
+                    menu();
+                    break;
+                case 3:
+                    Console.WriteLine("Exit from the program");
+                    return;
+                default:
+                    Console.WriteLine("Invalid choice. Try again.");
+                    menu();
+                    break;
             }
         }
 
@@ -60,6 +68,41 @@ namespace CSharp.Arrays
             }
             keysArray = newKeysArray;
             valuesArray = newValuesArray;
+        }
+
+        public void Delete()
+        {
+            Console.WriteLine("Enter key to delete: ");
+            string keyToDelete = Console.ReadLine();
+
+            int index = -1;
+            for (int i = 0; i < count; i++)
+            {
+                if (keysArray[i].ToString() == keyToDelete)
+                {
+                    index = i;
+                    break;
+                }
+            }
+
+            if (index == -1)
+            {
+                Console.WriteLine("Key not found!");
+                return;
+            }
+
+            // Shift elements to remove the key-value pair
+            for (int i = index; i < count - 1; i++)
+            {
+                keysArray[i] = keysArray[i + 1];
+                valuesArray[i] = valuesArray[i + 1];
+            }
+
+            keysArray[count - 1] = null;
+            valuesArray[count - 1] = null;
+            count--;
+
+            Console.WriteLine($"Key '{keyToDelete}' deleted successfully.");
         }
     }
 }
