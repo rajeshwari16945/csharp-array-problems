@@ -35,7 +35,9 @@ class Program
         /*var sol = new PermuteUnique();
         sol.GetPermuteUnique(new int[] { 1, 1, 2 });*/
 
-        DictionaryImplementationWithArrays dict = new DictionaryImplementationWithArrays();
-        dict.menu();
+        /*DictionaryImplementationWithArrays dict = new DictionaryImplementationWithArrays();
+        dict.menu();*/
+
+        RotateAndSum.RotateArrayAndGetSum();
     }
 }
