@@ -38,6 +38,8 @@ class Program
         /*DictionaryImplementationWithArrays dict = new DictionaryImplementationWithArrays();
         dict.menu();*/
 
-        RotateAndSum.RotateArrayAndGetSum();
+        /*RotateAndSum.RotateArrayAndGetSum();*/
+
+        ArrayManager.StringArrayManager();
     }
 }
