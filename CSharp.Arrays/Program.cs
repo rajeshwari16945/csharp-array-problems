@@ -40,6 +40,8 @@ class Program
 
         /*RotateAndSum.RotateArrayAndGetSum();*/
 
-        ArrayManager.StringArrayManager();
+        /*ArrayManager.StringArrayManager();*/
+
+        GuessFromArray.GuessTheValueFromArray();
     }
 }
