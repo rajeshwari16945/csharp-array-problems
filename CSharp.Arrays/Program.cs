@@ -42,6 +42,8 @@ class Program
 
         /*ArrayManager.StringArrayManager();*/
 
-        GuessFromArray.GuessTheValueFromArray();
+        /*GuessFromArray.GuessTheValueFromArray();*/
+
+        CharArray.PrintCharArray();
     }
 }
