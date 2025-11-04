@@ -44,6 +44,8 @@ class Program
 
         /*GuessFromArray.GuessTheValueFromArray();*/
 
-        CharArray.PrintCharArray();
+        /*CharArray.PrintCharArray();*/
+
+        FindMinAndMaxInArray.FindAndPrintMinMax();
     }
 }
