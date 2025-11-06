@@ -46,6 +46,8 @@ class Program
 
         /*CharArray.PrintCharArray();*/
 
-        FindMinAndMaxInArray.FindAndPrintMinMax();
+        /*FindMinAndMaxInArray.FindAndPrintMinMax();*/
+
+        PositiveArray.processingIntData();
     }
 }
