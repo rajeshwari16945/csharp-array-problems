@@ -48,6 +48,8 @@ class Program
 
         /*FindMinAndMaxInArray.FindAndPrintMinMax();*/
 
-        PositiveArray.processingIntData();
+        /*PositiveArray.processingIntData();*/
+
+        SearchAndSort.performSearchSort();
     }
 }
