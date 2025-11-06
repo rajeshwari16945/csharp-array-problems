@@ -48,6 +48,6 @@ class Program
 
         /*FindMinAndMaxInArray.FindAndPrintMinMax();*/
 
-        MatrixSumApp.getMatrixSum();
+        PositiveArray.processingIntData();
     }
 }
