@@ -52,6 +52,9 @@ class Program
 
         /*SearchAndSort.performSearchSort();*/
 
-        MatrixLength.getMatrixLength();
+        /*MatrixLength.getMatrixLength();*/
+
+        StudentMarks studentMarks = new StudentMarks();
+        studentMarks.calculateStudentMarks();
     }
 }
