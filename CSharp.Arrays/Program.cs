@@ -50,6 +50,8 @@ class Program
 
         /*PositiveArray.processingIntData();*/
 
-        SearchAndSort.performSearchSort();
+        /*SearchAndSort.performSearchSort();*/
+
+        MatrixLength.getMatrixLength();
     }
 }
