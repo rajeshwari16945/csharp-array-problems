@@ -54,7 +54,9 @@ class Program
 
         /*MatrixLength.getMatrixLength();*/
 
-        StudentMarks studentMarks = new StudentMarks();
-        studentMarks.calculateStudentMarks();
+        /*StudentMarks studentMarks = new StudentMarks();
+        studentMarks.calculateStudentMarks();*/
+
+        ReArrangeArray.rearrangeArray();
     }
 }
