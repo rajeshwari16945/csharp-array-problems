@@ -57,6 +57,8 @@ class Program
         /*StudentMarks studentMarks = new StudentMarks();
         studentMarks.calculateStudentMarks();*/
 
-        ReArrangeArray.rearrangeArray();
+        /*ReArrangeArray.rearrangeArray();*/
+
+        TemperatureTracker.getTemperatureTracker();
     }
 }
