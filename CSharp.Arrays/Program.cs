@@ -59,6 +59,8 @@ class Program
 
         /*ReArrangeArray.rearrangeArray();*/
 
-        TemperatureTracker.getTemperatureTracker();
+        /*TemperatureTracker.getTemperatureTracker();*/
+
+        ShiftAndSumArray.ShiftAndCalSum();
     }
 }
