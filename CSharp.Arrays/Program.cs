@@ -61,6 +61,8 @@ class Program
 
         /*TemperatureTracker.getTemperatureTracker();*/
 
-        ShiftAndSumArray.ShiftAndCalSum();
+        /*ShiftAndSumArray.ShiftAndCalSum();*/
+
+        CompareArrays.CreateArrays();
     }
 }
