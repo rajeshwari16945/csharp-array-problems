@@ -65,6 +65,8 @@ class Program
 
         /*CompareArrays.CreateArrays();*/
 
-        Console.WriteLine(DiagonalDifference.GetDiagDiff());
+        /*Console.WriteLine(DiagonalDifference.GetDiagDiff());*/
+
+        ValueFractionCounter.CountValueFractions();
     }
 }
