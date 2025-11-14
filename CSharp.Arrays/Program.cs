@@ -63,6 +63,8 @@ class Program
 
         /*ShiftAndSumArray.ShiftAndCalSum();*/
 
-        CompareArrays.CreateArrays();
+        /*CompareArrays.CreateArrays();*/
+
+        Console.WriteLine(DiagonalDifference.GetDiagDiff());
     }
 }
