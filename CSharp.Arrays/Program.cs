@@ -67,6 +67,8 @@ class Program
 
         /*Console.WriteLine(DiagonalDifference.GetDiagDiff());*/
 
-        ValueFractionCounter.CountValueFractions();
+        /*ValueFractionCounter.CountValueFractions();*/
+
+        MinMaxPartialSum.getMinMax();
     }
 }
