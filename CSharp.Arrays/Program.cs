@@ -71,6 +71,8 @@ class Program
 
         /*MinMaxPartialSum.getMinMax();*/
 
-        LongestConsecutive.PrintLongestConsecutive();
+        /*LongestConsecutive.PrintLongestConsecutive();*/
+
+        SecondLargestUniqueNumber.printNumber();
     }
 }
