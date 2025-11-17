@@ -69,6 +69,8 @@ class Program
 
         /*ValueFractionCounter.CountValueFractions();*/
 
-        MinMaxPartialSum.getMinMax();
+        /*MinMaxPartialSum.getMinMax();*/
+
+        LongestConsecutive.PrintLongestConsecutive();
     }
 }
