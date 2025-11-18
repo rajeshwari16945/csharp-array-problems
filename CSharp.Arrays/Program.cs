@@ -73,6 +73,8 @@ class Program
 
         /*LongestConsecutive.PrintLongestConsecutive();*/
 
-        SecondLargestUniqueNumber.printNumber();
+        /*SecondLargestUniqueNumber.printNumber();*/
+
+        StudentGrades.gradingStudents();
     }
 }
