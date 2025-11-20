@@ -75,6 +75,8 @@ class Program
 
         /*SecondLargestUniqueNumber.printNumber();*/
 
-        StudentGrades.gradingStudents();
+        /*StudentGrades.gradingStudents();*/
+
+        CountApplesOranges.countApplesAndOranges();
     }
 }
