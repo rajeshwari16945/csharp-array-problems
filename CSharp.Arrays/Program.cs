@@ -77,6 +77,8 @@ class Program
 
         /*StudentGrades.gradingStudents();*/
 
-        CountApplesOranges.countApplesAndOranges();
+        /*CountApplesOranges.countApplesAndOranges();*/
+
+        KangarooJumps.kangaroo();
     }
 }
