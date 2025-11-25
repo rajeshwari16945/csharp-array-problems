@@ -81,13 +81,18 @@ class Program
 
         /*KangarooJumps.kangaroo();*/
 
-       /* UnSortedSubArray unSortedSubArray = new UnSortedSubArray();
-        unSortedSubArray.FindUnSortedSubArray();*/
+        /* UnSortedSubArray unSortedSubArray = new UnSortedSubArray();
+         unSortedSubArray.FindUnSortedSubArray();*/
 
         /*TrappingRainWater.Trap(new int[] { 0,1,0,2,1,0,1,3,2,1,2,1 });*/
 
         /*Console.WriteLine(FirstMissingPositive.Find(new int[] { 1,2,0, 6 }));*/
 
-        StockAnalyzer.calculate();
+        /*StockAnalyzer.calculate();*/
+
+        int[] arr = { 5, 2, 4, 6, 1, 3 };
+        Console.WriteLine("Before Sorting: " + string.Join(", ", arr));
+        MergeSortWithArrays.MergeSort(arr, 0, arr.Length - 1);
+        Console.WriteLine("After Sorting: " + string.Join(", ", arr));
     }
 }
