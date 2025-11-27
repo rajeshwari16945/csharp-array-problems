@@ -95,6 +95,9 @@ class Program
         MergeSortWithArrays.MergeSort(arr, 0, arr.Length - 1);
         Console.WriteLine("After Sorting: " + string.Join(", ", arr));*/
 
-        Console.WriteLine(UniqueSubarraySumMinCost.MinCost(new int[] { 1, 2, 2 }));
+        /*Console.WriteLine(UniqueSubarraySumMinCost.MinCost(new int[] { 1, 2, 2 }));*/
+
+        int result = MaxNonOverlappingXorSubarrays.MaxNonOverlapping(new int[] { 1, 2, 3, 2, 1 }, 3);
+        Console.WriteLine("Maximum Non-Overlapping XOR = " + result);
     }
 }
