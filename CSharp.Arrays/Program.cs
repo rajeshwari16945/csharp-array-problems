@@ -97,9 +97,11 @@ class Program
 
         /*Console.WriteLine(UniqueSubarraySumMinCost.MinCost(new int[] { 1, 2, 2 }));*/
 
-       /* int result = MaxNonOverlappingXorSubarrays.MaxNonOverlapping(new int[] { 1, 2, 3, 2, 1 }, 3);
+        /*int result = MaxNonOverlappingXorSubarrays.MaxNonOverlapping(new int[] { 1, 2, 3, 2, 1 }, 3);
         Console.WriteLine("Maximum Non-Overlapping XOR = " + result);*/
 
-        Console.WriteLine(IncreasingSubsequencePartition.MinIncreasingSubsequences(new int[] { 4, 3, 2, 1 } ));
+        /*Console.WriteLine(IncreasingSubsequencePartition.MinIncreasingSubsequences(new int[] { 4, 3, 2, 1 } ));*/
+    
+        CountValuesAboveAverage.GetCount();
     }
 }
