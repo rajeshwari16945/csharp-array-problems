@@ -102,6 +102,9 @@ class Program
 
         /*Console.WriteLine(IncreasingSubsequencePartition.MinIncreasingSubsequences(new int[] { 4, 3, 2, 1 } ));*/
     
-        CountValuesAboveAverage.GetCount();
+        /*CountValuesAboveAverage.GetCount();*/
+
+        TextAnalyzer.Analyze();
+
     }
 }
