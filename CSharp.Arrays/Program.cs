@@ -104,7 +104,9 @@ class Program
     
         /*CountValuesAboveAverage.GetCount();*/
 
-        TextAnalyzer.Analyze();
+        /*TextAnalyzer.Analyze();*/
+
+        MaxSumSubmatrixLimitedDistinct.Find();
 
     }
 }
