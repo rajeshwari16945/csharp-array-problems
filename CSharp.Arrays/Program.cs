@@ -105,7 +105,7 @@ class Program
         /*CountValuesAboveAverage.GetCount();*/
 
         /*TextAnalyzer.Analyze();*/
-
+      
         var A = new int[] { 5, 1, 3, 4, 2 };
         var B = new int[] { 1, 5, 4, 3, 2 };
         var deps = new List<(int, int)>
