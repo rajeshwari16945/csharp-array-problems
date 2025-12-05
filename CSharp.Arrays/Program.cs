@@ -115,6 +115,8 @@ class Program
         };
         Console.WriteLine(new ConstrainedAdjacentSwapDistance().MinSwapsWithDependencies(A, B, deps));*/
 
-        Console.WriteLine(ZigZagArray.MovesToMakeZigzag(new int[] { 1, 2, 3 } ));
+        /*Console.WriteLine(ZigZagArray.MovesToMakeZigzag(new int[] { 1, 2, 3 } ));*/
+
+        MergeArraysRemoveDuplicates.getMergedArray();
     }
 }
