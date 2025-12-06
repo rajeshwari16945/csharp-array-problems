@@ -117,6 +117,8 @@ class Program
 
         /*Console.WriteLine(ZigZagArray.MovesToMakeZigzag(new int[] { 1, 2, 3 } ));*/
 
-        MergeArraysRemoveDuplicates.getMergedArray();
+        /*MergeArraysRemoveDuplicates.getMergedArray();*/
+
+        Console.WriteLine(String.Join(", ", CircularNextGreaterElement.NextGreaterElements(new int[] { 1, 2, 1 } )));
     }
 }
