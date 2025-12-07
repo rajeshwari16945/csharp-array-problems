@@ -121,8 +121,10 @@ class Program
 
         /* Console.WriteLine(String.Join(", ", CircularNextGreaterElement.NextGreaterElements(new int[] { 1, 2, 1 } )));*/
 
-        int[] nums = { 10, 5, 6, 3, 2, 20 };
-        WaveTransformer.ToWave(nums);
-        Console.WriteLine("Wave Form Array: " + string.Join(", ", nums));
+        /* int[] nums = { 10, 5, 6, 3, 2, 20 };
+         WaveTransformer.ToWave(nums);
+         Console.WriteLine("Wave Form Array: " + string.Join(", ", nums));*/
+
+        Console.WriteLine(string.Join(", ", ClusterCompressor.CompressClusters(new int[] { 2, 2, 2, 5, 5, 1, 1, 1, 1, 3 })));
     }
 }
