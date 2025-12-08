@@ -125,6 +125,9 @@ class Program
          WaveTransformer.ToWave(nums);
          Console.WriteLine("Wave Form Array: " + string.Join(", ", nums));*/
 
-        Console.WriteLine(string.Join(", ", ClusterCompressor.CompressClusters(new int[] { 2, 2, 2, 5, 5, 1, 1, 1, 1, 3 })));
+        /*Console.WriteLine(string.Join(", ", ClusterCompressor.CompressClusters(new int[] { 2, 2, 2, 5, 5, 1, 1, 1, 1, 3 })));*/
+
+        var points = new CircularEquilibrium().FindCircularEquilibriumPoints(new int[] { 2, 1, 3, 1, 2 });
+        Console.WriteLine("Equilibrium indices: " + string.Join(", ", points));
     }
 }
