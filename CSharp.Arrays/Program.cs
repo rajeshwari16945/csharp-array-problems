@@ -137,8 +137,6 @@ class Program
         Console.WriteLine("Peak found at index: " + peakIndex);
         Console.WriteLine("Peak value: " + nums[peakIndex]);*/
 
-        var transformer = new ArrayTransformer();
-        int[] result = transformer.SegmentedAlternatingSums(new int[] { 5, 2, 7, 3, 9, 4, 1 }, 3);
-        Console.WriteLine(string.Join(", ", result));
+        ArrayRearranger.PrintStableEvenOdd(new int[] { 3, 1, 2, 4, 7, 6, 5 });
     }
 }
