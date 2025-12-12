@@ -129,12 +129,14 @@ class Program
 
         /*var points = new CircularEquilibrium().FindCircularEquilibriumPoints(new int[] { 2, 1, 3, 1, 2 });
         Console.WriteLine("Equilibrium indices: " + string.Join(", ", points));*/
-        
+
         /*MemoryGame.play();*/
 
-        int[] nums = { 1, 3, 2, 5, 4, 7, 6 };
+        /*int[] nums = { 1, 3, 2, 5, 4, 7, 6 };
         int peakIndex = PeakInWaveArray.FindPeakElement(nums);
         Console.WriteLine("Peak found at index: " + peakIndex);
-        Console.WriteLine("Peak value: " + nums[peakIndex]);
+        Console.WriteLine("Peak value: " + nums[peakIndex]);*/
+
+        ArrayRearranger.PrintStableEvenOdd(new int[] { 3, 1, 2, 4, 7, 6, 5 });
     }
 }
