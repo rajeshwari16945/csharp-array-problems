@@ -139,7 +139,9 @@ class Program
 
         /*ArrayRearranger.PrintStableEvenOdd(new int[] { 3, 1, 2, 4, 7, 6, 5 });*/
 
-        int[] nums = { 1, 3, 2, 2, 3 };
-        Console.WriteLine(ArraySignalStabilization.MinRemovalsForStability(nums));
+        /*int[] nums = { 1, 3, 2, 2, 3 };
+        Console.WriteLine(ArraySignalStabilization.MinRemovalsForStability(nums));*/
+    
+        Console.WriteLine(MaxSumTwoNoOverlap.GetMaxSumTwoNoOverlap(new int[] { 0,6,5,2,2,5,1,9,4 }, 1));
     }
 }
