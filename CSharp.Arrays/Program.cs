@@ -142,6 +142,9 @@ class Program
         /*int[] nums = { 1, 3, 2, 2, 3 };
         Console.WriteLine(ArraySignalStabilization.MinRemovalsForStability(nums));*/
     
-        Console.WriteLine(MaxSumTwoNoOverlap.GetMaxSumTwoNoOverlap(new int[] { 0,6,5,2,2,5,1,9,4 }, 1));
+        /*Console.WriteLine(MaxSumTwoNoOverlap.GetMaxSumTwoNoOverlap(new int[] { 0,6,5,2,2,5,1,9,4 }, 1));*/
+
+
+        Console.WriteLine(ArrayRippleStabilization.CanStabilize(new int[] { 1, 2, 2, 3, 4 }));
     }
 }
