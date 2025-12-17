@@ -146,6 +146,11 @@ class Program
 
         /*Console.WriteLine(ArrayRippleStabilization.CanStabilize(new int[] { 1, 2, 2, 3, 4 }));*/
 
-        Console.WriteLine(string.Join(", ", ArrayEchoDistance.GetArrayEchoDistance(new int[] { 4, 7, 4, 9, 7, 4 })));
+        /*Console.WriteLine(string.Join(", ", ArrayEchoDistance.GetArrayEchoDistance(new int[] { 4, 7, 4, 9, 7, 4 })));*/
+
+        int[] arr = { 5, 3, 1, 2, 3 };
+        PeakValleyTransform.GetPeakValleyTransform(arr);
+        Console.WriteLine("Transformed array:");
+        Console.WriteLine(string.Join(", ", arr));
     }
 }
