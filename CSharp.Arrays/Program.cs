@@ -148,9 +148,11 @@ class Program
 
         /*Console.WriteLine(string.Join(", ", ArrayEchoDistance.GetArrayEchoDistance(new int[] { 4, 7, 4, 9, 7, 4 })));*/
 
-        int[] arr = { 5, 3, 1, 2, 3 };
+        /*int[] arr = { 5, 3, 1, 2, 3 };
         PeakValleyTransform.GetPeakValleyTransform(arr);
         Console.WriteLine("Transformed array:");
-        Console.WriteLine(string.Join(", ", arr));
+        Console.WriteLine(string.Join(", ", arr));*/
+
+        Console.WriteLine(string.Join(", ", CircularInfluence.CalculateInfluence(new int[] { 5, 1, 4, 2, 3 })));
     }
 }
