@@ -153,6 +153,9 @@ class Program
         Console.WriteLine("Transformed array:");
         Console.WriteLine(string.Join(", ", arr));*/
 
-        Console.WriteLine(string.Join(", ", CircularInfluence.CalculateInfluence(new int[] { 5, 1, 4, 2, 3 })));
+        /*Console.WriteLine(string.Join(", ", CircularInfluence.CalculateInfluence(new int[] { 5, 1, 4, 2, 3 })));*/
+
+        int[] memory = { 3, 1, 4, 2, 5, 1, 6 };
+        Console.WriteLine(MemoryLeakSimulation.CountLeakIncidents(memory));
     }
 }
