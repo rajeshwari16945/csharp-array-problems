@@ -158,8 +158,11 @@ class Program
         /*int[] memory = { 3, 1, 4, 2, 5, 1, 6 };
         Console.WriteLine(MemoryLeakSimulation.CountLeakIncidents(memory));*/
 
-        int[] arr = { 3, 1, 4, 4, 4, 2, 5 };
+        /*int[] arr = { 3, 1, 4, 4, 4, 2, 5 };
         int score = CalculateStabilityScore.GetCalculateStabilityScore(arr);
-        Console.WriteLine(score);
+        Console.WriteLine(score);*/
+
+        int[] nums = { 4, 1, 4, 2, 1, 4 };
+        Console.WriteLine(CountBalancedIndices.GetCount(nums));
     }
 }
