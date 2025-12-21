@@ -155,7 +155,11 @@ class Program
 
         /*Console.WriteLine(string.Join(", ", CircularInfluence.CalculateInfluence(new int[] { 5, 1, 4, 2, 3 })));*/
 
-        int[] memory = { 3, 1, 4, 2, 5, 1, 6 };
-        Console.WriteLine(MemoryLeakSimulation.CountLeakIncidents(memory));
+        /*int[] memory = { 3, 1, 4, 2, 5, 1, 6 };
+        Console.WriteLine(MemoryLeakSimulation.CountLeakIncidents(memory));*/
+
+        int[] arr = { 3, 1, 4, 4, 4, 2, 5 };
+        int score = CalculateStabilityScore.GetCalculateStabilityScore(arr);
+        Console.WriteLine(score);
     }
 }
