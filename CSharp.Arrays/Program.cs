@@ -165,7 +165,10 @@ class Program
         /*int[] nums = { 4, 1, 4, 2, 1, 4 };
         Console.WriteLine(CountBalancedIndices.GetCount(nums));*/
 
-        int result = SignalStability.CountStableWindows(new int[] { 4, 2, 5, 3, 6, 4 }, 3, 3);
-        Console.WriteLine($"Stable windows count: {result}");
+        /*int result = SignalStability.CountStableWindows(new int[] { 4, 2, 5, 3, 6, 4 }, 3, 3);
+        Console.WriteLine($"Stable windows count: {result}");*/
+
+        int[] arr = { 1, -4, 2, -6, 3, -1, 2 };
+        Console.WriteLine(LongestAlternatingDominant.GetLongestAlternatingDominant(arr));
     }
 }
