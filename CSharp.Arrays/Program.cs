@@ -162,7 +162,10 @@ class Program
         int score = CalculateStabilityScore.GetCalculateStabilityScore(arr);
         Console.WriteLine(score);*/
 
-        int[] nums = { 4, 1, 4, 2, 1, 4 };
-        Console.WriteLine(CountBalancedIndices.GetCount(nums));
+        /*int[] nums = { 4, 1, 4, 2, 1, 4 };
+        Console.WriteLine(CountBalancedIndices.GetCount(nums));*/
+
+        int result = SignalStability.CountStableWindows(new int[] { 4, 2, 5, 3, 6, 4 }, 3, 3);
+        Console.WriteLine($"Stable windows count: {result}");
     }
 }
