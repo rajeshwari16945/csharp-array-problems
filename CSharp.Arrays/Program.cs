@@ -168,7 +168,10 @@ class Program
         /*int result = SignalStability.CountStableWindows(new int[] { 4, 2, 5, 3, 6, 4 }, 3, 3);
         Console.WriteLine($"Stable windows count: {result}");*/
 
-        int[] arr = { 1, -4, 2, -6, 3, -1, 2 };
-        Console.WriteLine(LongestAlternatingDominant.GetLongestAlternatingDominant(arr));
+        /*int[] arr = { 1, -4, 2, -6, 3, -1, 2 };
+        Console.WriteLine(LongestAlternatingDominant.GetLongestAlternatingDominant(arr));*/
+
+        int[] arr = { 5, 2, 4, 6, 1, 3 };
+        Console.WriteLine( string.Join(", ", DelayedDominanceIndex.GetDelayedDominanceIndex(arr)));
     }
 }
