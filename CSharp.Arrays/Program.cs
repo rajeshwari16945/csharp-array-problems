@@ -174,7 +174,10 @@ class Program
         /*int[] arr = { 5, 2, 4, 6, 1, 3 };
         Console.WriteLine( string.Join(", ", DelayedDominanceIndex.GetDelayedDominanceIndex(arr)));*/
 
-        int[] arr = { 1, 1, 2, 2, 2, 1, 1 };
-        Console.WriteLine(AlternatingMajorityPrefix.Get(arr));
+        /*int[] arr = { 1, 1, 2, 2, 2, 1, 1 };
+        Console.WriteLine(AlternatingMajorityPrefix.Get(arr));*/
+
+        int[] arr = { 7, 3, 5, 2, 6 };
+        Console.WriteLine(MinOperationsToNonDecreasing.Get(arr));
     }
 }
