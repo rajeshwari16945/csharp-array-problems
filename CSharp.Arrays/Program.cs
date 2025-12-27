@@ -177,7 +177,10 @@ class Program
         /*int[] arr = { 1, 1, 2, 2, 2, 1, 1 };
         Console.WriteLine(AlternatingMajorityPrefix.Get(arr));*/
 
-        int[] arr = { 7, 3, 5, 2, 6 };
-        Console.WriteLine(MinOperationsToNonDecreasing.Get(arr));
+        /*int[] arr = { 7, 3, 5, 2, 6 };
+        Console.WriteLine(MinOperationsToNonDecreasing.Get(arr));*/
+
+        int[] visible = { 2, 1, 1, 0 };
+        Console.WriteLine(string.Join(", ", RebuildArray.build(visible)));
     }
 }
