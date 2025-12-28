@@ -180,7 +180,9 @@ class Program
         /*int[] arr = { 7, 3, 5, 2, 6 };
         Console.WriteLine(MinOperationsToNonDecreasing.Get(arr));*/
 
-        int[] visible = { 2, 1, 1, 0 };
-        Console.WriteLine(string.Join(", ", RebuildArray.build(visible)));
+        /*int[] visible = { 2, 1, 1, 0 };
+        Console.WriteLine(string.Join(", ", RebuildArray.build(visible)));*/
+
+        Console.WriteLine(MaxGravityEnergy.GetMaxGravityEnergy(new int[] { 2, 1, 4, 3, 5 }) );
     }
 }
