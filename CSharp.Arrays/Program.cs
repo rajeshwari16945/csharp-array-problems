@@ -183,6 +183,10 @@ class Program
         /*int[] visible = { 2, 1, 1, 0 };
         Console.WriteLine(string.Join(", ", RebuildArray.build(visible)));*/
 
-        Console.WriteLine(MaxGravityEnergy.GetMaxGravityEnergy(new int[] { 2, 1, 4, 3, 5 }) );
+        /*Console.WriteLine(MaxGravityEnergy.GetMaxGravityEnergy(new int[] { 2, 1, 4, 3, 5 }) );*/
+
+        int[] result = EchoCollapse.Collapse(new int[] { 4, 2, 3, 2, 5 }, 2);
+        Console.WriteLine(string.Join(", ", result));
+
     }
 }
