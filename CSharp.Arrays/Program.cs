@@ -185,8 +185,9 @@ class Program
 
         /*Console.WriteLine(MaxGravityEnergy.GetMaxGravityEnergy(new int[] { 2, 1, 4, 3, 5 }) );*/
 
-        int[] result = EchoCollapse.Collapse(new int[] { 4, 2, 3, 2, 5 }, 2);
-        Console.WriteLine(string.Join(", ", result));
+        /*int[] result = EchoCollapse.Collapse(new int[] { 4, 2, 3, 2, 5 }, 2);
+        Console.WriteLine(string.Join(", ", result));*/
 
+        Console.WriteLine(String.Join(", ", ParityInfluenceRadius.get(new int[] { 1, 2, 4, 3, 6 })));
     }
 }
