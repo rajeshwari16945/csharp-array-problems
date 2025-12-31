@@ -188,6 +188,10 @@ class Program
         /*int[] result = EchoCollapse.Collapse(new int[] { 4, 2, 3, 2, 5 }, 2);
         Console.WriteLine(string.Join(", ", result));*/
 
-        Console.WriteLine(String.Join(", ", ParityInfluenceRadius.get(new int[] { 1, 2, 4, 3, 6 })));
+        /*Console.WriteLine(String.Join(", ", ParityInfluenceRadius.get(new int[] { 1, 2, 4, 3, 6 })));*/
+
+        int[] output = MirrorDriftArray.DriftOnce(new int[] { 3, 4, 2, 7, 6 });
+        Console.WriteLine(string.Join(", ", output));
+
     }
 }
