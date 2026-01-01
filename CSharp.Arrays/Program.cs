@@ -190,8 +190,13 @@ class Program
 
         /*Console.WriteLine(String.Join(", ", ParityInfluenceRadius.get(new int[] { 1, 2, 4, 3, 6 })));*/
 
-        int[] output = MirrorDriftArray.DriftOnce(new int[] { 3, 4, 2, 7, 6 });
-        Console.WriteLine(string.Join(", ", output));
+        /*int[] output = MirrorDriftArray.DriftOnce(new int[] { 3, 4, 2, 7, 6 });
+        Console.WriteLine(string.Join(", ", output));*/
+
+        Console.WriteLine(StableDifferenceArray.CanBeStable(new int[] { 1, 3, 5, 7, 9 }));     // true
+        Console.WriteLine(StableDifferenceArray.CanBeStable(new int[] { 1, 3, 6, 8, 10 }));   // false
+        Console.WriteLine(StableDifferenceArray.CanBeStable(new int[] { 4, 4, 4, 4 }));      // true
+        Console.WriteLine(StableDifferenceArray.CanBeStable(new int[] { 1, 2, 4, 6 }));
 
     }
 }
