@@ -198,8 +198,11 @@ class Program
          Console.WriteLine(StableDifferenceArray.CanBeStable(new int[] { 4, 4, 4, 4 }));      // true
          Console.WriteLine(StableDifferenceArray.CanBeStable(new int[] { 1, 2, 4, 6 }));*/
 
-        int[] compressed = PulseCompressor.CompressPulses(new int[] { 3, -2, 5, -1, -4, 6, 0, -2, 3, -1, 1 });
-        Console.WriteLine(string.Join(", ", compressed));
+        /*int[] compressed = PulseCompressor.CompressPulses(new int[] { 3, -2, 5, -1, -4, 6, 0, -2, 3, -1, 1 });
+        Console.WriteLine(string.Join(", ", compressed));*/
 
+        int[] input = { 7, 5, 6, 3, 4 };
+        int[] output = ArrayPhaseDrift.PhaseDrift(input);
+        Console.WriteLine(string.Join(", ", output));
     }
 }
