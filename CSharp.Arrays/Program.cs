@@ -201,8 +201,10 @@ class Program
         /*int[] compressed = PulseCompressor.CompressPulses(new int[] { 3, -2, 5, -1, -4, 6, 0, -2, 3, -1, 1 });
         Console.WriteLine(string.Join(", ", compressed));*/
 
-        int[] input = { 7, 5, 6, 3, 4 };
+        /*int[] input = { 7, 5, 6, 3, 4 };
         int[] output = ArrayPhaseDrift.PhaseDrift(input);
-        Console.WriteLine(string.Join(", ", output));
+        Console.WriteLine(string.Join(", ", output));*/
+
+        Console.WriteLine(StableWindow.LongestStableWindow(new int[] { 10, 7, 4, 2, 5, 9, 12, 6, 3, 4 }));
     }
 }
