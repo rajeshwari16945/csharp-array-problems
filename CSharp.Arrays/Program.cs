@@ -205,6 +205,8 @@ class Program
         int[] output = ArrayPhaseDrift.PhaseDrift(input);
         Console.WriteLine(string.Join(", ", output));*/
 
-        Console.WriteLine(StableWindow.LongestStableWindow(new int[] { 10, 7, 4, 2, 5, 9, 12, 6, 3, 4 }));
+        /*Console.WriteLine(StableWindow.LongestStableWindow(new int[] { 10, 7, 4, 2, 5, 9, 12, 6, 3, 4 }));*/
+
+        Console.WriteLine(LoadBalancerDrift.MinLoadMoves(new int[] { 1, 0, 5 }));
     }
 }
