@@ -207,6 +207,9 @@ class Program
 
         /*Console.WriteLine(StableWindow.LongestStableWindow(new int[] { 10, 7, 4, 2, 5, 9, 12, 6, 3, 4 }));*/
 
-        Console.WriteLine(LoadBalancerDrift.MinLoadMoves(new int[] { 1, 0, 5 }));
+        /*Console.WriteLine(LoadBalancerDrift.MinLoadMoves(new int[] { 1, 0, 5 }));*/
+
+        Console.WriteLine(string.Join(", ", StabilityAwareReordering.ReorderArray(new int[] { 4, 7, 9, 2, 8, 11, 3, 6, 1 })));
+
     }
 }
