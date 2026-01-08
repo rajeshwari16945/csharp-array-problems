@@ -209,7 +209,9 @@ class Program
 
         /*Console.WriteLine(LoadBalancerDrift.MinLoadMoves(new int[] { 1, 0, 5 }));*/
 
-        Console.WriteLine(string.Join(", ", StabilityAwareReordering.ReorderArray(new int[] { 4, 7, 9, 2, 8, 11, 3, 6, 1 })));
+        /*Console.WriteLine(string.Join(", ", StabilityAwareReordering.ReorderArray(new int[] { 4, 7, 9, 2, 8, 11, 3, 6, 1 })));*/
+
+        Console.WriteLine(MinimumSegmentSplitCost.MinSplitCost(new int[] { 3, 1, 2 }));
 
     }
 }
