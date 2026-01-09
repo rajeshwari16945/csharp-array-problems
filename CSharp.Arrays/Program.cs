@@ -211,7 +211,8 @@ class Program
 
         /*Console.WriteLine(string.Join(", ", StabilityAwareReordering.ReorderArray(new int[] { 4, 7, 9, 2, 8, 11, 3, 6, 1 })));*/
 
-        Console.WriteLine(MinimumSegmentSplitCost.MinSplitCost(new int[] { 3, 1, 2 }));
+        /*Console.WriteLine(MinimumSegmentSplitCost.MinSplitCost(new int[] { 3, 1, 2 }));*/
 
+        Console.WriteLine(SignalInterferenceZones.CountInterferingPairs(new int[] { 3, 1, 2, 3, 1, 2 }));
     }
 }
