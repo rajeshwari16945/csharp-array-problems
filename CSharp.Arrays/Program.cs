@@ -215,7 +215,9 @@ class Program
 
         /*Console.WriteLine(SignalInterferenceZones.CountInterferingPairs(new int[] { 3, 1, 2, 3, 1, 2 }));*/
 
-        int[] arr = { 1, 2, 2, 2, 3, 1 };
-        Console.WriteLine(string.Join(", ", TemporalMajorityDrift.FindTemporallyDominant(arr)));
+        /*int[] arr = { 1, 2, 2, 2, 3, 1 };
+        Console.WriteLine(string.Join(", ", TemporalMajorityDrift.FindTemporallyDominant(arr)));*/
+
+        Console.WriteLine(string.Join(", ", ArrayMomentumEquilibrium.MomentumEquilibriumIndices(new int[] { 1, 2, 3, 2, 1 })));
     }
 }
