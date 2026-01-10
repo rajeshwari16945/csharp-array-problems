@@ -213,6 +213,9 @@ class Program
 
         /*Console.WriteLine(MinimumSegmentSplitCost.MinSplitCost(new int[] { 3, 1, 2 }));*/
 
-        Console.WriteLine(SignalInterferenceZones.CountInterferingPairs(new int[] { 3, 1, 2, 3, 1, 2 }));
+        /*Console.WriteLine(SignalInterferenceZones.CountInterferingPairs(new int[] { 3, 1, 2, 3, 1, 2 }));*/
+
+        int[] arr = { 1, 2, 2, 2, 3, 1 };
+        Console.WriteLine(string.Join(", ", TemporalMajorityDrift.FindTemporallyDominant(arr)));
     }
 }
