@@ -218,6 +218,8 @@ class Program
         /*int[] arr = { 1, 2, 2, 2, 3, 1 };
         Console.WriteLine(string.Join(", ", TemporalMajorityDrift.FindTemporallyDominant(arr)));*/
 
-        Console.WriteLine(string.Join(", ", ArrayMomentumEquilibrium.MomentumEquilibriumIndices(new int[] { 1, 2, 3, 2, 1 })));
+        /*Console.WriteLine(string.Join(", ", ArrayMomentumEquilibrium.MomentumEquilibriumIndices(new int[] { 1, 2, 3, 2, 1 })));*/
+
+        Console.WriteLine(DeferredRebalancing.CountValidReconciliations(new int[] { 5, 3, 0, -3, 2, 0, -5 }));
     }
 }
