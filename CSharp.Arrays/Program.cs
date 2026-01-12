@@ -220,6 +220,8 @@ class Program
 
         /*Console.WriteLine(string.Join(", ", ArrayMomentumEquilibrium.MomentumEquilibriumIndices(new int[] { 1, 2, 3, 2, 1 })));*/
 
-        Console.WriteLine(DeferredRebalancing.CountValidReconciliations(new int[] { 5, 3, 0, -3, 2, 0, -5 }));
+        /*Console.WriteLine(DeferredRebalancing.CountValidReconciliations(new int[] { 5, 3, 0, -3, 2, 0, -5 }));*/
+
+        Console.WriteLine(string.Join(", ", PressureZones.ComputePressure(new int[] { 6, 10, 15, 7, 14 })));
     }
 }
