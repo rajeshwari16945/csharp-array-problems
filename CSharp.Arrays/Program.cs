@@ -222,6 +222,8 @@ class Program
 
         /*Console.WriteLine(DeferredRebalancing.CountValidReconciliations(new int[] { 5, 3, 0, -3, 2, 0, -5 }));*/
 
-        Console.WriteLine(string.Join(", ", PressureZones.ComputePressure(new int[] { 6, 10, 15, 7, 14 })));
+        /*Console.WriteLine(string.Join(", ", PressureZones.ComputePressure(new int[] { 6, 10, 15, 7, 14 })));*/
+
+        Console.WriteLine( new StableDisruptionIndex().CountDisruptionIndices( new int[] { 1, 3, 2, 4, 5 } ) );
     }
 }
