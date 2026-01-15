@@ -224,9 +224,13 @@ class Program
 
         /*Console.WriteLine(string.Join(", ", PressureZones.ComputePressure(new int[] { 6, 10, 15, 7, 14 })));*/
 
-        Console.WriteLine( new StableDisruptionIndex().CountDisruptionIndices( new int[] { 1, 3, 2, 4, 5 } ) );
+        /*Console.WriteLine( new StableDisruptionIndex().CountDisruptionIndices( new int[] { 1, 3, 2, 4, 5 } ) );*/
 
-        Console.WriteLine(LeftRightDifferenceBalance.MinBalanceIndex(new int[] { 3, 1, 2, 4, 3 }));
+        /*Console.WriteLine(LeftRightDifferenceBalance.MinBalanceIndex(new int[] { 3, 1, 2, 4, 3 }));*/
+
+        int[] result = RecovertheHiddenPermutation.RecoverPermutation(new int[] { 2, 2, 3, 4, 5 });
+
+        Console.WriteLine(string.Join(", ", result));
 
     }
 }
