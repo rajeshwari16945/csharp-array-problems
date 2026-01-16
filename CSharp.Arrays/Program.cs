@@ -228,9 +228,10 @@ class Program
 
         /*Console.WriteLine(LeftRightDifferenceBalance.MinBalanceIndex(new int[] { 3, 1, 2, 4, 3 }));*/
 
-        int[] result = RecovertheHiddenPermutation.RecoverPermutation(new int[] { 2, 2, 3, 4, 5 });
-
-        Console.WriteLine(string.Join(", ", result));
+        /*int[] result = RecovertheHiddenPermutation.RecoverPermutation(new int[] { 2, 2, 3, 4, 5 });
+        Console.WriteLine(string.Join(", ", result));*/
+        
+        SilentPairCounter.GetCount();
 
     }
 }
