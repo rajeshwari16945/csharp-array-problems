@@ -235,7 +235,9 @@ class Program
 
         /*Console.WriteLine(LongestSubarraywithEqual0sand1s.FindMaxLength(new int[] { 0, 1, 0, 1, 0, 0, 1, 1 }));*/
 
-        long result = SilentMajoritySegments.CountSilentMajority(new int[] { 5, 6, 6, 6, 6 });
-        Console.WriteLine(result); 
+        /*long result = SilentMajoritySegments.CountSilentMajority(new int[] { 5, 6, 6, 6, 6 });
+        Console.WriteLine(result); */
+
+        Console.WriteLine(string.Join(", ", PalindromeInfluenceSpan.GetInfluenceArr(new string[] { "a", "b", "a", "c" })));
     }
 }
