@@ -240,6 +240,8 @@ class Program
 
         /*Console.WriteLine(string.Join(", ", PalindromeInfluenceSpan.GetInfluenceArr(new string[] { "a", "b", "a", "c" })));*/
 
-        Console.WriteLine(ParityLockArray.CanMakeAllEven(new long[] { 1, 4, 3 }) ? "true" : "false");
+        /*Console.WriteLine(ParityLockArray.CanMakeAllEven(new long[] { 1, 4, 3 }) ? "true" : "false");*/
+
+        Console.WriteLine(EnergyResetSegment.MaxEnergySegment(new int[] { 4, -6, 3, 2, -1, 4, -10, 5 }) );
     }
 }
