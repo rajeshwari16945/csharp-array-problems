@@ -242,6 +242,8 @@ class Program
 
         /*Console.WriteLine(ParityLockArray.CanMakeAllEven(new long[] { 1, 4, 3 }) ? "true" : "false");*/
 
-        Console.WriteLine(EnergyResetSegment.MaxEnergySegment(new int[] { 4, -6, 3, 2, -1, 4, -10, 5 }) );
+        /*Console.WriteLine(EnergyResetSegment.MaxEnergySegment(new int[] { 4, -6, 3, 2, -1, 4, -10, 5 }) )*/
+        
+        Console.WriteLine(ArrayEntropyCompression.MinEntropyAfterCompression(new int[] { 1, 1, 2, 2, 2, 1, 1 }) );
     }
 }
