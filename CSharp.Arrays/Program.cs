@@ -244,6 +244,8 @@ class Program
 
         /*Console.WriteLine(EnergyResetSegment.MaxEnergySegment(new int[] { 4, -6, 3, 2, -1, 4, -10, 5 }) )*/
         
-        Console.WriteLine(ArrayEntropyCompression.MinEntropyAfterCompression(new int[] { 1, 1, 2, 2, 2, 1, 1 }) );
+        /*Console.WriteLine(ArrayEntropyCompression.MinEntropyAfterCompression(new int[] { 1, 1, 2, 2, 2, 1, 1 }) );*/
+
+        Console.WriteLine(string.Join(", ", DelayedOverrideResolution.ResolveCommits(new int[] { 3, 5, -3, 0, 4, 0, -5 })));
     }
 }
