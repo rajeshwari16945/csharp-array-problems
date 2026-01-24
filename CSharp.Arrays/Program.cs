@@ -243,9 +243,12 @@ class Program
         /*Console.WriteLine(ParityLockArray.CanMakeAllEven(new long[] { 1, 4, 3 }) ? "true" : "false");*/
 
         /*Console.WriteLine(EnergyResetSegment.MaxEnergySegment(new int[] { 4, -6, 3, 2, -1, 4, -10, 5 }) )*/
-        
+
         /*Console.WriteLine(ArrayEntropyCompression.MinEntropyAfterCompression(new int[] { 1, 1, 2, 2, 2, 1, 1 }) );*/
 
-        Console.WriteLine(string.Join(", ", DelayedOverrideResolution.ResolveCommits(new int[] { 3, 5, -3, 0, 4, 0, -5 })));
+        /* Console.WriteLine(string.Join(", ", DelayedOverrideResolution.ResolveCommits(new int[] { 3, 5, -3, 0, 4, 0, -5 })));*/
+
+        Console.WriteLine(string.Join(", ", ConditionalRewind.ApplyConditionalRewind(new int[] { 5, 3, 0, 2, 4, -3, 6 })));
+
     }
 }
