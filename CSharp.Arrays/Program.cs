@@ -248,7 +248,9 @@ class Program
 
         /* Console.WriteLine(string.Join(", ", DelayedOverrideResolution.ResolveCommits(new int[] { 3, 5, -3, 0, 4, 0, -5 })));*/
 
-        Console.WriteLine(string.Join(", ", ConditionalRewind.ApplyConditionalRewind(new int[] { 5, 3, 0, 2, 4, -3, 6 })));
+        /*Console.WriteLine(string.Join(", ", ConditionalRewind.ApplyConditionalRewind(new int[] { 5, 3, 0, 2, 4, -3, 6 })));*/
+
+        Console.WriteLine(InvisibleMajorityWindows.InvisibleMajority(new int[] { 1, 2, 1, 2, 2 }));
 
     }
 }
