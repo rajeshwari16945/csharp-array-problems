@@ -250,7 +250,9 @@ class Program
 
         /*Console.WriteLine(string.Join(", ", ConditionalRewind.ApplyConditionalRewind(new int[] { 5, 3, 0, 2, 4, -3, 6 })));*/
 
-        Console.WriteLine(InvisibleMajorityWindows.InvisibleMajority(new int[] { 1, 2, 1, 2, 2 }));
+        /*Console.WriteLine(InvisibleMajorityWindows.InvisibleMajority(new int[] { 1, 2, 1, 2, 2 }));*/
+
+        Console.WriteLine(BalancedFrequencyPrefix.CountBalancedPrefixes(new int[] { 1, 2, 1, 2, 3, 3 })); 
 
     }
 }
