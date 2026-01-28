@@ -252,7 +252,9 @@ class Program
 
         /*Console.WriteLine(InvisibleMajorityWindows.InvisibleMajority(new int[] { 1, 2, 1, 2, 2 }));*/
 
-        Console.WriteLine(BalancedFrequencyPrefix.CountBalancedPrefixes(new int[] { 1, 2, 1, 2, 3, 3 })); 
+        /*Console.WriteLine(BalancedFrequencyPrefix.CountBalancedPrefixes(new int[] { 1, 2, 1, 2, 3, 3 }));*/
+        
+        Console.WriteLine(string.Join(", ", ArrayInfluencePropagation.ApplyInfluence(new int[] { 2, 0, -3, 1, 0 })));
 
     }
 }
