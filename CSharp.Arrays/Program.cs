@@ -256,7 +256,9 @@ class Program
 
         /* Console.WriteLine(string.Join(", ", ArrayInfluencePropagation.ApplyInfluence(new int[] { 2, 0, -3, 1, 0 })));*/
 
-        Console.WriteLine(LongestIncreasingAfterOneReverse.Solve(new int[] { 1, 3, 5, 4, 2, 6, 7 }));
+        /*Console.WriteLine(LongestIncreasingAfterOneReverse.Solve(new int[] { 1, 3, 5, 4, 2, 6, 7 }));*/
+
+        Console.WriteLine(ArrayTimeShiftInversions.MaxTimeShiftInversions(new int[] { 3, 4, 6, 7, 8 }));
 
     }
 }
