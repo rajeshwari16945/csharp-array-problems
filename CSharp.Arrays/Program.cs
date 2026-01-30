@@ -258,7 +258,9 @@ class Program
 
         /*Console.WriteLine(LongestIncreasingAfterOneReverse.Solve(new int[] { 1, 3, 5, 4, 2, 6, 7 }));*/
 
-        Console.WriteLine(ArrayTimeShiftInversions.MaxTimeShiftInversions(new int[] { 3, 4, 6, 7, 8 }));
+        /*Console.WriteLine(ArrayTimeShiftInversions.MaxTimeShiftInversions(new int[] { 3, 4, 6, 7, 8 }));*/
+
+        Console.WriteLine(ArraySelfDestructionOrder.CanSelfDestruct(new int[] { 1, 3, 2 }));
 
     }
 }
