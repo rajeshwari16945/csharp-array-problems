@@ -260,7 +260,11 @@ class Program
 
         /*Console.WriteLine(ArrayTimeShiftInversions.MaxTimeShiftInversions(new int[] { 3, 4, 6, 7, 8 }));*/
 
-        Console.WriteLine(ArraySelfDestructionOrder.CanSelfDestruct(new int[] { 1, 3, 2 }));
+        /*Console.WriteLine(ArraySelfDestructionOrder.CanSelfDestruct(new int[] { 1, 3, 2 }));*/
+
+        NodeHandler handler = new NodeHandler();
+        handler.CreateNodesFromArray();  
+        handler.DisplayNodes();
 
     }
 }
