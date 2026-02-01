@@ -262,9 +262,22 @@ class Program
 
         /*Console.WriteLine(ArraySelfDestructionOrder.CanSelfDestruct(new int[] { 1, 3, 2 }));*/
 
-        NodeHandler handler = new NodeHandler();
+        /*NodeHandler handler = new NodeHandler();
         handler.CreateNodesFromArray();  
-        handler.DisplayNodes();
+        handler.DisplayNodes();*/
 
+        int a = 5, b = 3;
+        BitwiseDemo bitwise = new BitwiseDemo(a, b);
+        Console.WriteLine($"a = {a}, b = {b}\n");
+        bitwise.AND();
+        bitwise.OR();
+        bitwise.XOR();
+        bitwise.NOT();
+        bitwise.LeftShift();
+        bitwise.RightShift();
+        bitwise.CheckEven();
+        Console.WriteLine();
+        int x = 7, y = 10;
+        bitwise.SwapXOR(ref x, ref y);
     }
 }
