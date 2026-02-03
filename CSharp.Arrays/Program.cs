@@ -266,7 +266,7 @@ class Program
         handler.CreateNodesFromArray();  
         handler.DisplayNodes();*/
 
-        int a = 5, b = 3;
+        /*int a = 5, b = 3;
         BitwiseDemo bitwise = new BitwiseDemo(a, b);
         Console.WriteLine($"a = {a}, b = {b}\n");
         bitwise.AND();
@@ -278,6 +278,8 @@ class Program
         bitwise.CheckEven();
         Console.WriteLine();
         int x = 7, y = 10;
-        bitwise.SwapXOR(ref x, ref y);
+        bitwise.SwapXOR(ref x, ref y);*/
+
+        Console.WriteLine(LargestRectangle.Area(new int[] { 2, 1, 5, 6, 2, 3 } ));
     }
 }
