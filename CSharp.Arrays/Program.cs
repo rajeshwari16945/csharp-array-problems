@@ -280,6 +280,11 @@ class Program
         int x = 7, y = 10;
         bitwise.SwapXOR(ref x, ref y);*/
 
-        Console.WriteLine(LargestRectangle.Area(new int[] { 2, 1, 5, 6, 2, 3 } ));
+        /*Console.WriteLine(LargestRectangle.Area(new int[] { 2, 1, 5, 6, 2, 3 } ));*/
+
+        string s = "cbaebabacd";
+        string p = "abc";
+        IList<int> anagramIndices = Anagrams.FindAnagrams(s, p);
+        Console.WriteLine("Anagram Indices: " + string.Join(", ", anagramIndices));
     }
 }
